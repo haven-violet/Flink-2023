@@ -1,0 +1,7 @@
+[FATAL     ]0 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:26) 2023-03-27 22:41:37.724 fatal log
+ [ERROR     ]4 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:27) 2023-03-27 22:41:37.728 error log
+ [WARN      ]4 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:28) 2023-03-27 22:41:37.728 warn log
+ [INFO      ]4 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:29) 2023-03-27 22:41:37.728 info log
+ [DEBUG     ]4 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:30) 2023-03-27 22:41:37.728 debug log
+ [TRACE     ]4 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:31) 2023-03-27 22:41:37.728 trage log
+ 
