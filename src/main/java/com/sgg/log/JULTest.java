@@ -1,5 +1,7 @@
 package com.sgg.log;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -74,5 +76,15 @@ public class JULTest {
         logger.log(Level.FINER, "finer");
         logger.log(Level.FINEST, "finest");
 
+    }
+    @Test
+    public void testJCL() {
+        // 使用JCL 门面创建日志对象
+        Log log = LogFactory.getLog(JULTest.class);
+        log.fatal("fatal");
+        log.error("error");
+        log.warn("warn");
+        log.info("info");
+        log.debug("debug");
     }
 }

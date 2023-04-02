@@ -1,5 +1,7 @@
 package com.sgg.log;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.apache.log4j.helpers.LogLog;
@@ -53,5 +55,16 @@ public class Log4jTest {
         logger.info("info log");   //todo 程序运行信息, 数据库的连接、网络、IO操作等
         logger.debug("debug log"); //todo 调试信息，一般在开发阶段使用, 记录程序的变量，参数等
         logger.trace("trage log"); //todo 追踪信息, 记录程序的所有流程信息
+    }
+
+    @Test
+    public void testJCL() {
+        // 使用JCL 门面创建日志对象
+        Log log = LogFactory.getLog(JULTest.class);
+        log.fatal("fatal");
+        log.error("error");
+        log.warn("warn");
+        log.info("info");
+        log.debug("debug");
     }
 }
