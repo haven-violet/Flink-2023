@@ -1,0 +1,14 @@
+三月 26, 2023 8:44:10 下午 com.sgg.log.JULTest testCustom
+严重: severe
+三月 26, 2023 8:44:10 下午 com.sgg.log.JULTest testCustom
+警告: warning
+三月 26, 2023 8:44:10 下午 com.sgg.log.JULTest testCustom
+信息: info
+三月 26, 2023 8:44:10 下午 com.sgg.log.JULTest testCustom
+配置: config
+三月 26, 2023 8:44:10 下午 com.sgg.log.JULTest testCustom
+详细: fine
+三月 26, 2023 8:44:10 下午 com.sgg.log.JULTest testCustom
+较详细: finer
+三月 26, 2023 8:44:10 下午 com.sgg.log.JULTest testCustom
+非常详细: finest
