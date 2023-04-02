@@ -4,4 +4,22 @@
  [INFO      ]4 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:29) 2023-03-27 22:41:37.728 info log
  [DEBUG     ]4 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:30) 2023-03-27 22:41:37.728 debug log
  [TRACE     ]4 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:31) 2023-03-27 22:41:37.728 trage log
+ [FATAL     ]0 com.sgg.log.Log4jTest.testLog4j(Log4jTest.java:46) 2023-04-02 15:06:10.543 fatal log
+ [ERROR     ]4 com.sgg.log.Log4jTest.testLog4j(Log4jTest.java:47) 2023-04-02 15:06:10.547 error log
+ [WARN      ]5 com.sgg.log.Log4jTest.testLog4j(Log4jTest.java:48) 2023-04-02 15:06:10.548 warn log
+ [INFO      ]5 com.sgg.log.Log4jTest.testLog4j(Log4jTest.java:49) 2023-04-02 15:06:10.548 info log
+ [DEBUG     ]5 com.sgg.log.Log4jTest.testLog4j(Log4jTest.java:50) 2023-04-02 15:06:10.548 debug log
+ [TRACE     ]5 com.sgg.log.Log4jTest.testLog4j(Log4jTest.java:51) 2023-04-02 15:06:10.548 trage log
+ [FATAL     ]0 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:26) 2023-04-02 15:07:31.611 fatal log
+ [ERROR     ]1 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:27) 2023-04-02 15:07:31.612 error log
+ [WARN      ]2 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:28) 2023-04-02 15:07:31.613 warn log
+ [INFO      ]2 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:29) 2023-04-02 15:07:31.613 info log
+ [DEBUG     ]2 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:30) 2023-04-02 15:07:31.613 debug log
+ [TRACE     ]2 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:31) 2023-04-02 15:07:31.613 trage log
+ [FATAL     ]0 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:26) 2023-04-02 16:05:47.309 fatal log
+ [ERROR     ]2 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:27) 2023-04-02 16:05:47.311 error log
+ [WARN      ]2 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:28) 2023-04-02 16:05:47.311 warn log
+ [INFO      ]2 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:29) 2023-04-02 16:05:47.311 info log
+ [DEBUG     ]2 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:30) 2023-04-02 16:05:47.311 debug log
+ [TRACE     ]2 com.sgg.log.Log4jTest.testLog4jByProperties(Log4jTest.java:31) 2023-04-02 16:05:47.311 trage log
  
