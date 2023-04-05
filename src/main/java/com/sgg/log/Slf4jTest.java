@@ -14,6 +14,17 @@ import org.slf4j.LoggerFactory;
  */
 public class Slf4jTest {
     public final static Logger LOGGER = LoggerFactory.getLogger(Slf4jTest.class);
+
+    @Test
+    public void testLogback() {
+        //logback默认日志级别是 debug
+        LOGGER.error("error");
+        LOGGER.warn("warn");
+        LOGGER.info("info");
+        LOGGER.debug("debug");
+        LOGGER.trace("trace");
+    }
+
     @Test
     public void testSlf4jSimple() {
         LOGGER.error("error");
@@ -39,8 +50,8 @@ public class Slf4jTest {
      */
     @Test
     public void testAdapter() {
-        org.apache.log4j.Logger log4jAdapter = org.apache.log4j.Logger.getLogger("log4j_adapter");
-        log4jAdapter.info("hello log4j adapter");
+//        org.apache.log4j.Logger log4jAdapter = org.apache.log4j.Logger.getLogger("log4j_adapter");
+//        log4jAdapter.info("hello log4j adapter");
     }
 
     public static void main(String[] args) {
