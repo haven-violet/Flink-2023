@@ -30,4 +30,24 @@ public class Slf4jTest {
             LOGGER.info("出现异常", e);
         }
     }
+
+    public static void main(String[] args) {
+        java.util.logging.Logger log = java.util.logging.Logger.getLogger("slf4jTest");
+        long start_time_1 = System.currentTimeMillis();
+        for (int i = 0; i < 100_0000; i++) {
+            System.out.println(i);
+        }
+        long end_time_1 = System.currentTimeMillis();
+        System.out.println(" 使用System.out.println(), 耗时: " + (end_time_1 - start_time_1) + " ms ");
+
+        long start_time_2 = System.currentTimeMillis();
+        for (int i = 0; i < 100_0000; i++) {
+            log.info("");
+        }
+        long end_time_2 = System.currentTimeMillis();
+        System.out.println(" 使用System.out.println(), 耗时: " + (end_time_2 - start_time_2) + " ms ");
+
+
+    }
+
 }
