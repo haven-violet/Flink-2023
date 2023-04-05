@@ -42,7 +42,11 @@
         </dependency>
 
 
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.7.26</version>
+        </dependency>
 
 <!--        todo 1、SLF4j日志门面-->
         <dependency>
@@ -57,11 +61,11 @@
 <!--            <version>1.7.26</version>-->
 <!--        </dependency>-->
 <!--        todo 3. logback-->
-<!--        <dependency>-->
-<!--            <groupId>ch.qos.logback</groupId>-->
-<!--            <artifactId>logback-classic</artifactId>-->
-<!--            <version>1.2.3</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
 <!--        todo 4. slf-nop日志开关 -->
 <!--        <dependency>-->
 <!--            <groupId>org.slf4j</groupId>-->
