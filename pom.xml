@@ -79,12 +79,12 @@
 <!--            <artifactId>log4j</artifactId>-->
 <!--            <version>1.2.17</version>-->
 <!--        </dependency>-->
-<!--        todo 6. jdk-->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-jdk14</artifactId>
-            <version>1.7.26</version>
-        </dependency>
+<!--&lt;!&ndash;        todo 6. jdk&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-jdk14</artifactId>-->
+<!--            <version>1.7.26</version>-->
+<!--        </dependency>-->
 
 
 <!--        2.log4j1 日志实现-->
