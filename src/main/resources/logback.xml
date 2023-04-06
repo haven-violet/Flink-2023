@@ -29,16 +29,32 @@ ch.qos.logback.core.FileAppender (文件)
 %n 为换行
  -->
     <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %c [%thread] %-5level %msg%n"/>
-
+    <property name="log_dir" value="E:\\workspace\\data"></property>
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <target>System.err</target> <!--输出流对象默认为System.out 改为System.err -->
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>${pattern}</pattern>
         </encoder>
     </appender>
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+    `   <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> <!-- 日志格式配置-->
+            <pattern>${pattern}</pattern>
+        </encoder>
+        <file>${log_dir}/loback.log</file>  <!--日志输出路径-->
+    </appender>
+    <appender name="htmlFile" class="ch.qos.logback.core.FileAppender" >
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="ch.qos.logback.classic.html.HTMLLayout">
+                <pattern>%level%d{yyyy-MM-dd HH:mm:ss}%c%M%L%thread%m</pattern>
+            </layout>
+        </encoder>
+        <file>${log_dir}/logback.html</file>
+    </appender>
 
     <root level="ALL">
         <appender-ref ref="console"/>
+        <appender-ref ref="file"/>
+        <appender-ref ref="htmlFile"/>
     </root>
 
 </configuration>
