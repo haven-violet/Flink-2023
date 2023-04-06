@@ -28,19 +28,19 @@ ch.qos.logback.core.FileAppender (文件)
 %m或者%msg为信息
 %n 为换行
  -->
-    <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %c [%thread] %-5level %msg%n"/>
+<!--    <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %c [%thread] %-5level %msg%n"/>
     <property name="log_dir" value="E:\\workspace\\data"></property>
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-        <target>System.err</target> <!--输出流对象默认为System.out 改为System.err -->
+        <target>System.err</target> &lt;!&ndash;输出流对象默认为System.out 改为System.err &ndash;&gt;
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>${pattern}</pattern>
         </encoder>
     </appender>
     <appender name="file" class="ch.qos.logback.core.FileAppender">
-    `   <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> <!-- 日志格式配置-->
+    `   <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> &lt;!&ndash; 日志格式配置&ndash;&gt;
             <pattern>${pattern}</pattern>
         </encoder>
-        <file>${log_dir}/loback.log</file>  <!--日志输出路径-->
+        <file>${log_dir}/loback.log</file>  &lt;!&ndash;日志输出路径&ndash;&gt;
     </appender>
     <appender name="htmlFile" class="ch.qos.logback.core.FileAppender" >
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
@@ -51,10 +51,73 @@ ch.qos.logback.core.FileAppender (文件)
         <file>${log_dir}/logback.html</file>
     </appender>
 
+
+    -->
+
+<!--    <appender name="rollFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${pattern}</pattern>
+        </encoder>
+        <file>${log_dir}/roll_back.log</file>
+        &lt;!&ndash;通过指定压缩文件名称,来确定分割文件方式&ndash;&gt;
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/rolling.%d{yyyy-MM-dd}.log%i.gz</fileNamePattern>
+            <maxFileSize>1KB</maxFileSize>
+        </rollingPolicy>
+
+    </appender>-->
+
+
+
+
+
+
+
+
+    <property name="pattern" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %c %M %L [%thread] %m%n"/>
+    <property name="log_dir" value="E:\\workspace\\data"></property>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.err</target>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志拆分和归档压缩的 appender 对象 -->
+    <appender name="rollFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 日志文件保存路径 -->
+        <file>${log_dir}/roll_logback.log</file>
+        <!-- 日志消息格式配置 -->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${pattern}</pattern>
+        </encoder>
+        <!-- 指定拆分规则 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 按照时间和压缩格式声明拆分的文件名 -->
+            <fileNamePattern>${log_dir}/rolling.%d{yyyy-MM-dd}.log%i.gz</fileNamePattern>
+            <!-- 按照文件大小拆分 -->
+            <maxFileSize>1KB</maxFileSize>
+        </rollingPolicy>
+        <!-- 日志级别过滤器 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!-- 日志过滤规则 -->
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+    <!-- 异步日志 -->
+    <appender name="async" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 指定某个具体的 appender -->
+        <appender-ref ref="rollFile"/>
+    </appender>
+    <!-- root logger 配置 -->
     <root level="ALL">
         <appender-ref ref="console"/>
-        <appender-ref ref="file"/>
-        <appender-ref ref="htmlFile"/>
+        <appender-ref ref="async"/>
     </root>
 
+    <logger name="com.sgg.log" level="info" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
 </configuration>

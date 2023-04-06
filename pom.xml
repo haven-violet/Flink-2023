@@ -42,13 +42,11 @@
         </dependency>
 
 
-
-
 <!--        todo 1、SLF4j日志门面-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.26</version>
+            <version>1.7.25</version>
         </dependency>
 <!--        todo 2、SLF4j内置的简单实现-->
 <!--        <dependency>-->
