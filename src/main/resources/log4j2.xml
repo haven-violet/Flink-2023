@@ -4,7 +4,7 @@
     <properties><property name="LOG_HOME">E:\\workspace\\data</property></properties>
     <Appenders>
         <Console name="Console" target="SYSTEM_ERR">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] [%-5level] %c{36}:%L --- %m%n"/>
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] %l %c{36} - %m%n"/>
         </Console>
 
         <!-- 使用随机读写刘的日志文件输出 appender，性能提高 -->
@@ -31,14 +31,18 @@
         <File name="file" fileName="${LOG_HOME}/myfile.log">
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] %l %c{36} - %m%n"/>
         </File>
-        <Async name="Async">
-            <AppenderRef ref="file"/>
-        </Async>
+
     </Appenders>
     <Loggers>
+<!--        自定义异步Logger对象
+            includeLocation="false" 关闭日志记录的行号信息
+            additivity="false" 不在继承rootLogger对象
+-->
+        <AsyncLogger name="com.sgg.log" level="trace" includeLocation="false" additivity="false">
+            <AppenderRef ref="Console"/>
+        </AsyncLogger>
         <Root level="debug">
             <AppenderRef ref="Console"/>
-            <AppenderRef ref="Async"/>
         </Root>
     </Loggers>
 </Configuration>
