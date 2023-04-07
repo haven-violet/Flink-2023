@@ -18,7 +18,7 @@ public class Slf4jTest {
     @Test
     public void testLogback() {
         //logback默认日志级别是 debug
-        for (int i = 0; i < 1050; i++) {
+        for (int i = 0; i < 10; i++) {
             LOGGER.error("error");
             LOGGER.warn("warn");
             LOGGER.info("info");
