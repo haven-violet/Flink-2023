@@ -1,3 +1,4 @@
+/*
 package com.sgg.log;
 
 
@@ -5,6 +6,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.logging.*;
 
+*/
 /**
  * @BelongsProject: Flink-2023
  * @BelongsPackage: com.sgg.log
@@ -12,7 +14,8 @@ import java.util.logging.*;
  * @CreateTime: 2023-03-26  16:11
  * @Description: TODO
  * @Version: 1.0
- */
+ *//*
+
 public class JULTest {
 
     @Test
@@ -86,3 +89,4 @@ public class JULTest {
 //        log.debug("debug");
 //    }
 }
+*/

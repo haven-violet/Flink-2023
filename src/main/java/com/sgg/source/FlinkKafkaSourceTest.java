@@ -1,3 +1,4 @@
+/*
 package com.sgg.source;
 
 import org.apache.flink.api.common.RuntimeExecutionMode;
@@ -8,6 +9,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.kafka.clients.consumer.OffsetResetStrategy;
 
 
+*/
 /**
  * @BelongsProject: Flink-2023
  * @BelongsPackage: com.sgg.source
@@ -15,15 +17,18 @@ import org.apache.kafka.clients.consumer.OffsetResetStrategy;
  * @CreateTime: 2023-03-12  22:14
  * @Description: TODO 测试 Flink1.14.4 和 kafkaSource 结合
  * @Version: 1.0
- */
+ *//*
+
 public class FlinkKafkaSourceTest {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setRuntimeMode(RuntimeExecutionMode.STREAMING);
 
-        /**
+        */
+/**
          * 从Kafka中读取数据得到数据流
-         */
+         *//*
+
         KafkaSource.<String>builder()
                 .setTopics("bigdata01")
                 .setBootstrapServers("")
@@ -51,3 +56,4 @@ public class FlinkKafkaSourceTest {
         env.execute();
     }
 }
+*/

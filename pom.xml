@@ -7,6 +7,10 @@
     <groupId>com.sgg</groupId>
     <artifactId>Flink-2023</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>Flink_course</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -14,13 +18,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <parent>
+<!--    <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.7.RELEASE</version>
     </parent>
+-->
 
     <dependencies>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
+    </dependencies>
+
+
+
+<!--
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -33,37 +50,38 @@
         </dependency>
 
 
-<!--        todo Log4j 门面Api -->
+&lt;!&ndash;        todo Log4j 门面Api &ndash;&gt;
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.11.1</version>
         </dependency>
-<!--        todo Log4j2 日志实现-->
+&lt;!&ndash;        todo Log4j2 日志实现&ndash;&gt;
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.11.1</version>
         </dependency>
 
-<!--        todo 1、SLF4j日志门面-->
+&lt;!&ndash;        todo 1、SLF4j日志门面&ndash;&gt;
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.25</version>
         </dependency>
-<!--        todo 7、为Slf4j 绑定日志实现 log4j2的适配器 -->
+&lt;!&ndash;        todo 7、为Slf4j 绑定日志实现 log4j2的适配器 &ndash;&gt;
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>2.10.0</version>
         </dependency>
-<!--        异步日志依赖-->
+&lt;!&ndash;        异步日志依赖&ndash;&gt;
         <dependency>
             <groupId>com.lmax</groupId>
             <artifactId>disruptor</artifactId>
             <version>3.3.4</version>
         </dependency>
+-->
 
 
 <!--        todo 2、SLF4j内置的简单实现-->
@@ -117,5 +135,5 @@
 <!--            <version>1.2</version>-->
 <!--        </dependency>-->
 
-    </dependencies>
+
 </project>

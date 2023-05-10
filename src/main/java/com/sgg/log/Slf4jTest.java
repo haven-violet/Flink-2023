@@ -1,9 +1,11 @@
+/*
 package com.sgg.log;
 
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+*/
 /**
  * @BelongsProject: Flink-2023
  * @BelongsPackage: com.sgg.log
@@ -11,7 +13,8 @@ import org.slf4j.LoggerFactory;
  * @CreateTime: 2023-04-03  22:33
  * @Description: TODO
  * @Version: 1.0
- */
+ *//*
+
 public class Slf4jTest {
     public final static Logger LOGGER = LoggerFactory.getLogger(Slf4jTest.class);
 
@@ -44,12 +47,14 @@ public class Slf4jTest {
         }
     }
 
-    /**
+    */
+/**
      * TODO 桥接器
      *      老项目使用使用了 log4j
      *      现在想要使用 slf4j + logback, 这样需要修改代码
      *      但是又不想修改代码, 所以退出针对老项目福音, 适配器
-     */
+     *//*
+
     @Test
     public void testAdapter() {
 //        org.apache.log4j.Logger log4jAdapter = org.apache.log4j.Logger.getLogger("log4j_adapter");
@@ -76,3 +81,4 @@ public class Slf4jTest {
     }
 
 }
+*/
